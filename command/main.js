@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var copy_command_1 = require("./copy-command");
+var invoker_1 = require("./invoker");
+var operate_command_1 = require("./operate-command");
+var receiver_1 = require("./receiver");
+var copy = new copy_command_1.CopyCommand('Franco Mamani');
+var receiver = new receiver_1.Receiver();
+var operate = new operate_command_1.OperateCommand(receiver, 'Alizon Luna');
+var invoker = new invoker_1.Invoker();
+invoker.addCommand(copy);
+invoker.addCommand(operate);
+invoker.addCommand(operate);
+invoker.run();

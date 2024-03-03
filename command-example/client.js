@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var command_1 = require("./command");
+var invoker_1 = require("./invoker");
+var receiver_1 = require("./receiver");
+var invoker = new invoker_1.Invoker();
+var receiver = new receiver_1.Receiver();
+invoker.addCommand(new command_1.ConcreteCommand(receiver, 'Franco'));
+invoker.addCommand(new command_1.ConcreteCommand(receiver, 'Jesus'));
+invoker.run();
